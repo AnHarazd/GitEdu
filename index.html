@@ -77,6 +77,32 @@ View git history. View diff of committed files. View git blame info. View stash 
 10. git pull 
 (Downloading all changes from repository)
 
+11. alias
+  C\Users\Andrew\*.*
+  File: .gitconfig
+  [alias]
+**********************************************************************************************    
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Andrew Harazdowskiy
+[user]
+	email = xxxxxxxxxxxxxxxxxxx
+[init]
+	defaultBranch = main
+[alias]
+s = status --short
+st = status
+l = log --oneline --graph --decorate --all
+g = log --graph --abbrev-commit --decorate --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)'
+br = branch
+co = checkout
+**********************************************************************************************    
+
+
 
 
 

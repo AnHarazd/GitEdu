@@ -13,9 +13,8 @@
     <p>Зміна #2 у файлі HTML</p>
     // Новий комент
 
-<!-- 
 
-!! Attention - if not work
+<!-- !! Attention - if not work
 Add "git.path" in setting.json -- path to git.exe 
 Path and filename of the git executable, e.g. C:\Program Files\Git\bin\git.exe (Windows).
 This can also be an array of string values containing multiple paths to look up.
@@ -62,6 +61,7 @@ $ cd css (go to subdirectory)
 6. git push -u origin main
 ** main - name of branch in your repositiries
 
+
 ***************************************************************
 7. git add . (вносимо до push усі файли)
    git add "index.html" (вносимо до push тільки один файл)
@@ -72,7 +72,8 @@ $ cd css (go to subdirectory)
 9.STRONGLY Recommemded Install to VS Code
   Git History Diff
 Hui Zhou
-View git history. View diff of committed files. View git blame info. View stash details.
+View git history. View diff of committed files. 
+View git blame info. View stash details.
 
 10. git pull 
 (Downloading all changes from repository)
@@ -81,7 +82,7 @@ View git history. View diff of committed files. View git blame info. View stash 
   C\Users\Andrew\*.*
   File: .gitconfig
   [alias]
-**********************************************************************************************    
+**********************************************************************************    
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -97,7 +98,9 @@ View git history. View diff of committed files. View git blame info. View stash 
 s = status --short
 st = status
 l = log --oneline --graph --decorate --all
-g = log --graph --abbrev-commit --decorate --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)'
+g = log --graph --abbrev-commit --decorate --all --format=format:
+    '%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset)
+    %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)'
 br = branch
 co = checkout
 
@@ -149,6 +152,27 @@ git l -3 (три останні коміти у репозиторії — alias
 15. Відміняємо останній commit soft reset-ом ІЗ БЕРЕЖЕННЯМ ЗМІН
     HEAD^1 — один commit назад
     git reset --soft HEAD^1
+
+
+**********************************************************************
+Work with BRANCH
+**********************************************************************  
+16. List of branch
+$ git branch (work branch)
+$ git br (alias)
+
+17. Create new branch
+$ git branch develop
+
+18. Switch to (new) other branch
+$ git co develop
+
+
+
+
+
+
+
 
 
 

@@ -1,15 +1,87 @@
-E:\Library>git init
+*** E:\Library>git init  (ініціалізуємо репозиторій)
 Initialized empty Git repository in E:/Library/.git/
 
-E:\Library>git status
-      git config --global --add safe.directory E:/Library
-E:\Library>git status
+*** E:\Library>git status (перевіряємо статус)
+      ***git config --global --add safe.directory E:/Library 
+
+*** E:\Library>git status  (перевіряємо статус)
+
+      On branch master
+
+      No commits yet
+
+      Untracked files:
+        (use "git add <file>..." to include in what will
+              be committed)
+             .gitignore
+              .gitreadme
+              domain/
+
+***  E:\Library>git add .  (додаємо файли до репозиторію)
+
+*** E:\Library>git commit -m "Clear Template"  (робимо коміт)
+    [master (root-commit) 9af46be] Clear Template
+     20 files changed, 171 insertions(+)
+
+# Наш віддалений сервер має назву - origin https://github.com/AnHarazd/elibrary.git
+Гілка локального репозиторію має назву - master
+# Встановлюємо звязок нашого локального репо з віддаленим репо на GitHub
+
+*** git remote add origin https://github.com/AnHarazd/elibrary.git
+
+Щоб побачити, які віддалені сервера ви налаштували, ви можете виконати команду
+*** git remote
+origin
+
+
+Ви також можете дати опцію -v, яка покаже вам посилання, які Git зберігає та використовує при читанні та записі до цього сховища:
+*** git remote -v
+origin  https://github.com/AnHarazd/elibrary.git (fetch)
+origin  https://github.com/AnHarazd/elibrary.git (push)
+
+Коли ви довели свій проект до стану, коли хочете ним поділитись, вам треба
+надіслати (push) ваші зміни нагору (upstream). Це робиться простою командою:
+
+***git  push <назва сховища> <назва гілки>. 
+ 
+Якщо ви бажаєте викласти свою гілку master до вашого серверу origin (клонування зазвичай налаштовує обидва імені для вас автоматично), 
+ви можете виконати наступне для надсилання всіх зроблених комітів до сервера:
+*** git push origin master
+
+Якщо хтось інший зробив клон та надіслав щось назад перед вами, вашій спробі буде слушно відмовлено. 
+Вам доведеться спершу отримати їхню працю й вбудувати її до вашої до того, як вам дозволять надіслати свої зміни.
+
+=================================
+Оглядання віддаленого сховища
+Якщо ви бажаєте більше дізнатись про окреме віддалене сховище, ви можете використати команду
+git remote show <назва сховища>.
+
+E:\Library>git remote show origin
+* remote origin
+  Fetch URL: https://github.com/AnHarazd/elibrary.git
+  Push  URL: https://github.com/AnHarazd/elibrary.git
+  HEAD branch: (unknown)
+
+Перейменування та видалення віддалених сховищ
+Ви можете виконати git remote rename, щоб перейменувати віддалене сховище.
+Наприклад, щоб перейменувати pb на paul, ви можете зробити це за допомогою
+git remote rename
+git remote rename pb paul
+
+git remote rename origin main
 
 
 
 
 
 
+
+
+
+
+
+
+========================================================
 https://github.com/AnHarazd/elibrary.git
 Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.
 

@@ -1,6 +1,6 @@
 # Ігнорувати усі файли в теці .venv/
 .venv/
 
-
 # Конфігурація Django
 settings.py
+.gitreadme
